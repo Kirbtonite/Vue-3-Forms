@@ -1,0 +1,92 @@
+# npm audit report
+
+@babel/traverse  <7.23.2
+Severity: critical
+Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code - https://github.com/advisories/GHSA-67hx-6x53-jw92
+fix available via `npm audit fix`
+node_modules/@babel/traverse
+
+ajv  <6.12.3
+Severity: moderate
+Prototype Pollution in Ajv - https://github.com/advisories/GHSA-v88g-cgmw-v5xw
+fix available via `npm audit fix`
+node_modules/ajv
+
+ansi-regex  4.0.0 - 4.1.0
+Severity: high
+Inefficient Regular Expression Complexity in chalk/ansi-regex - https://github.com/advisories/GHSA-93q8-gq69-wqmw
+fix available via `npm audit fix`
+node_modules/eslint/node_modules/ansi-regex
+node_modules/table/node_modules/ansi-regex
+
+axios  <=0.27.2
+Severity: high
+axios Inefficient Regular Expression Complexity vulnerability - https://github.com/advisories/GHSA-cph5-m8f7-6c5x
+Axios Cross-Site Request Forgery Vulnerability - https://github.com/advisories/GHSA-wf5p-g6vw-rhxx
+fix available via `npm audit fix`
+node_modules/axios
+
+cross-spawn  <6.0.6
+Severity: high
+Regular Expression Denial of Service (ReDoS) in cross-spawn - https://github.com/advisories/GHSA-3xgq-45jj-v275
+fix available via `npm audit fix`
+node_modules/eslint/node_modules/cross-spawn
+
+debug  4.0.0 - 4.3.0
+Regular Expression Denial of Service in debug - https://github.com/advisories/GHSA-gxpj-cx7g-858c
+fix available via `npm audit fix`
+node_modules/eslint/node_modules/debug
+
+follow-redirects  <=1.15.5
+Severity: high
+Exposure of Sensitive Information to an Unauthorized Actor in follow-redirects - https://github.com/advisories/GHSA-pw2r-vq6v-hr8c
+Exposure of sensitive information in follow-redirects - https://github.com/advisories/GHSA-74fj-2j2h-c42q
+Follow Redirects improperly handles URLs in the url.parse() function - https://github.com/advisories/GHSA-jchw-25xp-jwwc
+follow-redirects' Proxy-Authorization header kept across hosts - https://github.com/advisories/GHSA-cxjh-pqwp-8mfp
+fix available via `npm audit fix`
+node_modules/follow-redirects
+
+glob-parent  4.0.0 - 5.1.1
+Severity: high
+glob-parent vulnerable to Regular Expression Denial of Service in enclosure regex - https://github.com/advisories/GHSA-ww39-953v-wcq6
+fix available via `npm audit fix`
+node_modules/eslint/node_modules/glob-parent
+
+loader-utils  <=1.4.1
+Severity: critical
+Prototype pollution in webpack loader-utils - https://github.com/advisories/GHSA-76p3-8jx3-jpfq
+loader-utils is vulnerable to Regular Expression Denial of Service (ReDoS) via url variable - https://github.com/advisories/GHSA-3rfm-jhwj-7488
+loader-utils is vulnerable to Regular Expression Denial of Service (ReDoS) - https://github.com/advisories/GHSA-hhq3-ff78-jv3g
+fix available via `npm audit fix`
+node_modules/sass-loader/node_modules/loader-utils
+
+postcss  <8.4.31
+Severity: moderate
+PostCSS line return parsing error - https://github.com/advisories/GHSA-7fh5-64p2-3v2j
+fix available via `npm audit fix --force`
+Will install @vue/cli-service@3.3.1, which is a breaking change
+node_modules/@vue/component-compiler-utils/node_modules/postcss
+  @vue/component-compiler-utils  *
+  Depends on vulnerable versions of postcss
+  node_modules/@vue/component-compiler-utils
+    @vue/cli-service  *
+    Depends on vulnerable versions of @vue/component-compiler-utils
+    Depends on vulnerable versions of vue-loader
+    node_modules/@vue/cli-service
+    vue-loader  15.0.0-beta.1 - 15.11.1
+    Depends on vulnerable versions of @vue/component-compiler-utils
+    node_modules/@vue/vue-loader-v15
+
+word-wrap  <1.2.4
+Severity: moderate
+word-wrap vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-j8xg-fqg3-53r7
+fix available via `npm audit fix`
+node_modules/word-wrap
+
+14 vulnerabilities (1 low, 6 moderate, 5 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
